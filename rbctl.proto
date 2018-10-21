@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package rbctl;
+
+service RBCtl {
+    rpc Control(Command) returns (ControlResponse) {}
+    // rpc Update(UpdateRequest) returns (stream UpdateData) {}
+}
+
+message Command {
+    enum Type {
+        UNKNOWN = 0;
+        PLAY = 1;
+        PAUSE = 2;
+        PLAY_PAUSE = 3;
+        NEXT = 4;
+        PREVIOUS = 5;
+    }
+    Type type = 1;
+}
+
+message ControlResponse {
+    bool success = 1;
+    string message = 2;
+}
+
+// message UpdateRequest {}
+
+// message UpdateData {
+//     string title = 1;
+// }

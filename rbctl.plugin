@@ -1,0 +1,9 @@
+[Plugin]
+Loader=python3
+Module=rbctl
+IAge=2
+Name=rbctl remote
+Description=A gRPC-based Rhythmbox remote
+Authors=Armen Boursalian <aboursalian@gmail.com>
+Copyright=Copyright © 2018 Armen Boursalian
+Website=https://github.com/Northern-Lights/rbctl
